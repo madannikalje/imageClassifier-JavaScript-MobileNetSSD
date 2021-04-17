@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Classifier</title>
+    <meta name="description" content="perfundo is a pure CSS lightbox which is completely functional without JavaScript. Image lightboxes fully functional using CSS only. No JavaScript required.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="vendor/perfundo/perfundo.with-icons.css">
+    <link rel="stylesheet" href="dist/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <div class="c-hero qa-hero">
+        <div class="o-vertical-spacing o-vertical-spacing--xl c-hero__inner">
+            <div class="c-hero__head">
+                <h1 id="ob" class="c-h1"></h1>
+                <h2 id="conf" class="c-h3">
+                    <br />
+                </h2>
+            </div>
+
+
+            <img src="img/img-single_s.jpg" id="preView" alt="Demo image" style="width:600px;height:400px;">
+            <br>
+
+
+
+
+            <!-- <li><a onclick="getImg()" class="c-button c-button--contrast ">Load Image</a></li> -->
+            <!-- <li><a id="download" href="https://github.com/maoberlehner/perfundo/archive/4.0.3.zip" class="c-button c-button--contrast c-button--secondary">Download</a></li> -->
+            <input type="file" id="img" class="c-button c-button--contrast c-button--secondary" accept="image/*">
+            <button onclick="loadxyz()" class="c-button c-button--contrast c-button--secondary">Load Image</button>
+            <br>
+            <button onclick="pred()" id="pred" class="c-button c-button--contrast c-button--secondary">Predict</button>
+
+        </div>
+    </div>
+
+    <script src="vendor/perfundo/perfundo.js"></script>
+    <script src="sketch.js"></script>
+    <script>
+        perfundo('.js-perfundo', {
+            disableHistory: true,
+            swipe: true
+        });
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-57407594-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" defer></script>
+</body>
+
+</html>
